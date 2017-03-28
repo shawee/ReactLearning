@@ -3,9 +3,13 @@ var React = require('react');
 var WeatherMessage = React.createClass({
     render: function () {
         var {temp, location} = this.props;
-        return (
-            <h2>it is {temp} in {location}</h2>
-        );
+        if (temp && location){
+            return (
+                <h2>it is {temp} in {location}</h2>
+            );
+        }else {
+            return (<p></p>);
+        }
     }
 });
 
