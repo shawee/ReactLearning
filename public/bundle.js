@@ -26609,17 +26609,13 @@
 
 	var React = __webpack_require__(1);
 
-	var Example = React.createClass({
-	    displayName: 'Example',
-
-	    render: function render() {
-	        return React.createElement(
-	            'h2',
-	            null,
-	            'Example'
-	        );
-	    }
-	});
+	var Example = function Example(props) {
+	    return React.createElement(
+	        'h2',
+	        null,
+	        'Example'
+	    );
+	};
 
 	module.exports = Example;
 
