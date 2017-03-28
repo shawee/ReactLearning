@@ -1,5 +1,20 @@
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+      'script!jquery/dist/jquery.min.js',
+      'script!foundation-sites/dist/foundation.min.js',
+      './app/app.jsx'
+  ],
+  externals: {
+    jquery: 'jQuery'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+        '$': 'jquery',
+        'jQuery': 'jquery'
+    })
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -17,7 +32,7 @@ module.exports = {
         openWeatherMap: 'app/api/openWeatherMap.jsx'
 //        why no . before app
     },
-    extensions: ['', '.js', '.jsx']
+  extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
