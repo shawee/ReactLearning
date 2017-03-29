@@ -5,7 +5,7 @@ var WeatherMessage = React.createClass({
         var {temp, location} = this.props;
         if (temp && location){
             return (
-                <h2>it is {temp} in {location}</h2>
+                <h1 className="text-center">it is {temp} in {location}</h1>
             );
         }else {
             return (<p></p>);

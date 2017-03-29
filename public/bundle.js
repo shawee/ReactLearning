@@ -24928,11 +24928,6 @@
 	                React.createElement(
 	                    'div',
 	                    { className: 'columns medium-6 large-6 small-centered' },
-	                    React.createElement(
-	                        'h2',
-	                        null,
-	                        'Main components'
-	                    ),
 	                    this.props.children
 	                )
 	            )
@@ -25078,8 +25073,8 @@
 	        function Loading() {
 	            if (isLoading) {
 	                return React.createElement(
-	                    'h2',
-	                    null,
+	                    'h1',
+	                    { className: 'text-center' },
 	                    'Fetching the weather data'
 	                );
 	            } else {
@@ -25091,8 +25086,8 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h2',
-	                null,
+	                'h1',
+	                { className: 'text-center' },
 	                'weather'
 	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
@@ -25133,7 +25128,7 @@
 	                React.createElement('input', { type: 'text', ref: 'location' }),
 	                React.createElement(
 	                    'button',
-	                    null,
+	                    { className: 'button expanded hollow' },
 	                    'Get Weather'
 	                )
 	            )
@@ -25147,12 +25142,12 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	    displayName: 'WeatherMessage',
+	    displayName: "WeatherMessage",
 
 	    render: function render() {
 	        var _props = this.props,
@@ -25161,15 +25156,15 @@
 
 	        if (temp && location) {
 	            return React.createElement(
-	                'h2',
-	                null,
-	                'it is ',
+	                "h1",
+	                { className: "text-center" },
+	                "it is ",
 	                temp,
-	                ' in ',
+	                " in ",
 	                location
 	            );
 	        } else {
-	            return React.createElement('p', null);
+	            return React.createElement("p", null);
 	        }
 	    }
 	});
@@ -26700,18 +26695,49 @@
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	    displayName: 'About',
+	    displayName: "About",
 
 	    render: function render() {
 	        return React.createElement(
-	            'h2',
+	            "div",
 	            null,
-	            'About'
+	            React.createElement(
+	                "h1",
+	                { className: "text-center" },
+	                "About"
+	            ),
+	            React.createElement(
+	                "p",
+	                null,
+	                "This is a learning example of react"
+	            ),
+	            React.createElement(
+	                "ul",
+	                null,
+	                React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "https://facebook.github.io/react" },
+	                        "React"
+	                    )
+	                ),
+	                React.createElement(
+	                    "li",
+	                    null,
+	                    React.createElement(
+	                        "a",
+	                        { href: "http://openweathermap.org" },
+	                        "Open Weather Map API"
+	                    )
+	                )
+	            )
 	        );
 	    }
 	});
