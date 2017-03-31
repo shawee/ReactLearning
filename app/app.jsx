@@ -5,6 +5,9 @@ var Main = require('Main');
 var Weather = require('Weather');
 var About = require('About');
 var Example = require('Example');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
+
 
 //Load Foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -18,6 +21,8 @@ ReactDOM.render(
         <Route path="/" component={Main}>
             <Route path="about" component={About}/>
             <Route path="example" component={Example}/>
+            <Route path="timer" component={Timer}/>
+            <Route path="countdown" component={Countdown}/>
             <IndexRoute component={Weather}/>
         </Route>
     </Router>,

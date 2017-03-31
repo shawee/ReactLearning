@@ -31,7 +31,13 @@ module.exports = {
         Example: 'app/components/Example.jsx',
         openWeatherMap: 'app/api/openWeatherMap.jsx',
         ErrorModal: 'app/components/ErrorModal.jsx',
-        applicationStyles: 'app/styles/app.scss'
+        applicationStyles: 'app/styles/app.scss',
+        
+        //Timer app
+        Timer: 'app/components/Timer.jsx',
+        Countdown: 'app/components/Countdown.jsx',
+        Clock: 'app/components/Clock.jsx'
+        
 //        why no . before app
     },
   extensions: ['', '.js', '.jsx']
